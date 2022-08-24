@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(18, 18, 18, 0.5019607843);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay .pop-up {
+  position: relative;
+  width: 920px;
+  height: 210px;
+  background-color: #fff;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 95px;
+  gap: 24px;
+}
+.overlay .pop-up h2 {
+  font-weight: 700;
+  font-size: 42px;
+}
+.overlay .pop-up p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+}
+.overlay .pop-up .close-pop-up {
+  position: absolute;
+  top: 46px;
+  right: 46px;
+  width: 12px;
+  height: 12px;
+}
+.overlay .pop-up .close-pop-up::before, .overlay .pop-up .close-pop-up::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 18px;
+  background-color: #000;
+  border-radius: 8px;
+}
+.overlay .pop-up .close-pop-up::before {
+  transform: rotate(45deg);
+}
+.overlay .pop-up .close-pop-up::after {
+  transform: rotate(-45deg);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+section {
+  width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 96px;
+  gap: 95px;
+}
+section img {
+  width: 505px;
+  height: 330px;
+  left: 230px;
+  top: 96px;
+}
+section .right {
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+section .right h1 {
+  width: 380px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 120%;
+  color: #121212;
+}
+section .right p {
+  width: 380px;
+  height: 96px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  color: #121212;
+}
+section .right button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px 40px;
+  gap: 10px;
+  width: 128px;
+  height: 48px;
+  background: #e4c1ae;
+  border-radius: 32px;
+  color: white;
+  font-weight: 700;
+}/*# sourceMappingURL=main.css.map */

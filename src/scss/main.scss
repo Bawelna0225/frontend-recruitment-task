@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+@import './overlay';
+
+@mixin center-flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto';
+}
+
+section {
+	width: 1440px;
+	@include center-flex;
+	margin: 0 auto;
+	padding-top: 96px;
+	gap: 95px;
+	img {
+		width: 505px;
+		height: 330px;
+		left: 230px;
+		top: 96px;
+	}
+	.right {
+		height: 380px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 32px;
+		h1 {
+			width: 380px;
+			height: 50px;
+			font-weight: 700;
+			font-size: 42px;
+			line-height: 120%;
+			color: #121212;
+		}
+		p {
+			width: 380px;
+			height: 96px;
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 150%;
+			color: #121212;
+		}
+		button {
+			border: none;
+			@include center-flex;
+			flex-direction: row;
+			align-items: flex-start;
+			padding: 16px 40px;
+			gap: 10px;
+			width: 128px;
+			height: 48px;
+			background: #e4c1ae;
+			border-radius: 32px;
+			color: white;
+			font-weight: 700;
+		}
+	}
+}
