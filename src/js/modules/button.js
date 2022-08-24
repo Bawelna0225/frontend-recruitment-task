@@ -12,5 +12,6 @@ export const createButton = (content) => {
 		body.appendChild(modal)
 	})
 
+
 	return button
 }

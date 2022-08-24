@@ -33,5 +33,11 @@ export const createModal = (numberOfClicks) => {
 		overlay.remove()
 	})
 
+	window.addEventListener('click', (e) => {
+		if (document.querySelector('.overlay') && !document.querySelector('.pop-up').contains(e.target) && !document.querySelector('button').contains(e.target)) {
+			overlay.remove()
+		}
+	})
+
 	return overlay
 }
