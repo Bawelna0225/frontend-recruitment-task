@@ -1,0 +1,25 @@
+@media (max-width: 600px) {
+	section {
+		padding-top: 20px;
+        margin: 0 auto;
+		gap: 20px;
+		button {
+			@include center-flex;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100% !important;
+			font-size: 1.1rem;
+		}
+	}
+	.pop-up {
+		padding: 20px !important;
+		.close-pop-up {
+			top: 30px !important;
+			right: 20px !important;
+		}
+		.reset {
+			width: 100%;
+		}
+	}
+}

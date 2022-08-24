@@ -13,6 +13,8 @@ button {
 	cursor: pointer;
 }
 section {
+	overflow: hidden;
+	width: 100%;
 	width: min(calc(100% - 1rem), 1440px);
 	flex-wrap: wrap;
 	@include center-flex;
@@ -20,12 +22,13 @@ section {
 	padding-top: 96px;
 	gap: 95px;
 	img {
-		width: 505px;
-		height: 330px;
+		width: min(100%, 505px);
+		aspect-ratio: 505 / 330;
 		left: 230px;
 		top: 96px;
 	}
 	div {
+		width: min(100%, 380px);
 		height: 380px;
 		display: flex;
 		flex-direction: column;
@@ -33,15 +36,15 @@ section {
 		gap: 32px;
 		h1 {
 			width: 380px;
-			height: 50px;
+			height: max-content;
 			font-weight: 700;
 			font-size: 42px;
 			line-height: 120%;
 			color: #121212;
 		}
 		p {
-			width: 380px;
-			height: 96px;
+			width: 100%;
+			height: max-content;
 			font-weight: 300;
 			font-size: 16px;
 			line-height: 150%;
@@ -63,3 +66,4 @@ section {
 		}
 	}
 }
+@import './media';

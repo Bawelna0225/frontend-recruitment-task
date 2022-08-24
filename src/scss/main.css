@@ -10,7 +10,7 @@
 .overlay .pop-up {
   position: relative;
   margin: 0 auto;
-  width: 920px;
+  width: min(100% - 1rem, 920px);
   height: 210px;
   background-color: #fff;
   opacity: 1;
@@ -74,6 +74,8 @@ button {
 }
 
 section {
+  overflow: hidden;
+  width: 100%;
   width: min(100% - 1rem, 1440px);
   flex-wrap: wrap;
   display: flex;
@@ -84,12 +86,13 @@ section {
   gap: 95px;
 }
 section img {
-  width: 505px;
-  height: 330px;
+  width: min(100%, 505px);
+  aspect-ratio: 505/330;
   left: 230px;
   top: 96px;
 }
 section div {
+  width: min(100%, 380px);
   height: 380px;
   display: flex;
   flex-direction: column;
@@ -98,15 +101,19 @@ section div {
 }
 section div h1 {
   width: 380px;
-  height: 50px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   font-weight: 700;
   font-size: 42px;
   line-height: 120%;
   color: #121212;
 }
 section div p {
-  width: 380px;
-  height: 96px;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   font-weight: 300;
   font-size: 16px;
   line-height: 150%;
@@ -127,4 +134,32 @@ section div button {
   border-radius: 32px;
   color: white;
   font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  section {
+    padding-top: 20px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  section button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    font-size: 1.1rem;
+  }
+  .pop-up {
+    padding: 20px !important;
+  }
+  .pop-up .close-pop-up {
+    top: 30px !important;
+    right: 20px !important;
+  }
+  .pop-up .reset {
+    width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */

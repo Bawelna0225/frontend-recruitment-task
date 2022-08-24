@@ -6,7 +6,7 @@
 	.pop-up {
 		position: relative;
 		margin: 0 auto;
-		width: 920px;
+		width: min(100% - 1rem, 920px);
 		height: 210px;
 		background-color: #fff;
 		opacity: 1;
