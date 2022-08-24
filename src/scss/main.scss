@@ -1,12 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 
+@import './mixins';
 @import './overlay';
-
-@mixin center-flex {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
 
 * {
 	margin: 0;
@@ -14,9 +9,12 @@
 	box-sizing: border-box;
 	font-family: 'Roboto';
 }
-
+button {
+	cursor: pointer;
+}
 section {
-	width: 1440px;
+	width: min(calc(100% - 1rem), 1440px);
+	flex-wrap: wrap;
 	@include center-flex;
 	margin: 0 auto;
 	padding-top: 96px;
@@ -27,7 +25,7 @@ section {
 		left: 230px;
 		top: 96px;
 	}
-	.right {
+	div {
 		height: 380px;
 		display: flex;
 		flex-direction: column;

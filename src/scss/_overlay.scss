@@ -5,6 +5,7 @@
 	@include center-flex;
 	.pop-up {
 		position: relative;
+		margin: 0 auto;
 		width: 920px;
 		height: 210px;
 		background-color: #fff;
@@ -28,24 +29,35 @@
 			position: absolute;
 			top: 46px;
 			right: 46px;
-			width: 12px;
-			height: 12px;
-            &::before, &::after {
+			width: 18px;
+			height: 18px;
+			cursor: pointer;
+			border: none;
+			background-color: transparent;
+			&::before,
+			&::after {
 				position: absolute;
 				content: '';
 				width: 2px;
 				height: 18px;
 				background-color: #000;
-                border-radius: 8px;
-            }
+				border-radius: 8px;
+			}
 			&::before {
-
-				transform: rotate(45deg);
+				transform: translateY(-10px) rotate(45deg);
+				// transform: rotate(45deg);
 			}
 			&::after {
-
-				transform: rotate(-45deg);
+				transform: translateY(-10px) rotate(-45deg);
+				// transform: rotate(-45deg);
 			}
+		}
+		.reset {
+			border: none;
+			padding: 10px;
+						background: #88837f;
+			border-radius: 12px;
+			color: white;
 		}
 	}
 }

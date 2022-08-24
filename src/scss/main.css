@@ -9,6 +9,7 @@
 }
 .overlay .pop-up {
   position: relative;
+  margin: 0 auto;
   width: 920px;
   height: 210px;
   background-color: #fff;
@@ -33,8 +34,11 @@
   position: absolute;
   top: 46px;
   right: 46px;
-  width: 12px;
-  height: 12px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 .overlay .pop-up .close-pop-up::before, .overlay .pop-up .close-pop-up::after {
   position: absolute;
@@ -45,10 +49,17 @@
   border-radius: 8px;
 }
 .overlay .pop-up .close-pop-up::before {
-  transform: rotate(45deg);
+  transform: translateY(-10px) rotate(45deg);
 }
 .overlay .pop-up .close-pop-up::after {
-  transform: rotate(-45deg);
+  transform: translateY(-10px) rotate(-45deg);
+}
+.overlay .pop-up .reset {
+  border: none;
+  padding: 10px;
+  background: #88837f;
+  border-radius: 12px;
+  color: white;
 }
 
 * {
@@ -58,8 +69,13 @@
   font-family: "Roboto";
 }
 
+button {
+  cursor: pointer;
+}
+
 section {
-  width: 1440px;
+  width: min(100% - 1rem, 1440px);
+  flex-wrap: wrap;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,14 +89,14 @@ section img {
   left: 230px;
   top: 96px;
 }
-section .right {
+section div {
   height: 380px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 32px;
 }
-section .right h1 {
+section div h1 {
   width: 380px;
   height: 50px;
   font-weight: 700;
@@ -88,7 +104,7 @@ section .right h1 {
   line-height: 120%;
   color: #121212;
 }
-section .right p {
+section div p {
   width: 380px;
   height: 96px;
   font-weight: 300;
@@ -96,7 +112,7 @@ section .right p {
   line-height: 150%;
   color: #121212;
 }
-section .right button {
+section div button {
   border: none;
   display: flex;
   justify-content: center;
