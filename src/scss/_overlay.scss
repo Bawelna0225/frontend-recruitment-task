@@ -45,17 +45,15 @@
 			}
 			&::before {
 				transform: translateY(-10px) rotate(45deg);
-				// transform: rotate(45deg);
 			}
 			&::after {
 				transform: translateY(-10px) rotate(-45deg);
-				// transform: rotate(-45deg);
 			}
 		}
 		.reset {
 			border: none;
 			padding: 10px;
-						background: #88837f;
+			background: #88837f;
 			border-radius: 12px;
 			color: white;
 		}

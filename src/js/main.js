@@ -1,6 +1,5 @@
 import { createButton } from './modules/button.js'
 import { createComponent } from './modules/createComponent.js'
-// TODO: remove modal after clicking outside of it
 const body = document.querySelector('body')
 
 const createImg = (src, alt) => {
@@ -26,7 +25,6 @@ const createSection = () => {
 	rightPanel.appendChild(heading)
 	rightPanel.appendChild(paragraph)
 	rightPanel.appendChild(button)
-
 }
 
 createSection()
