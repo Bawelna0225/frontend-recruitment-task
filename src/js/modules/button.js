@@ -8,7 +8,7 @@ export const createButton = (content) => {
 	button.textContent = content
 
 	button.addEventListener('click', () => {
-		let modal = createModal(clickCounter('increase'))
+		const modal = createModal(clickCounter('increase'))
 		body.appendChild(modal)
 	})
 
